@@ -151,12 +151,16 @@ class LinkedList
     elements = []
 
     while current.next != nil do
-      elements << current
+      elements << current.data
       current = current.next
     end 
-    elements << current.next 
+    elements << current.data 
   end
+
+  def reverseTraverse
+    current = @head
 end
+
 
 
 
@@ -168,7 +172,7 @@ p link.insert(10)
 p link.insert(15)
 p link.insert(25)
 p link.delete(33)
-p link.transaction()
+p link.traverse()
 
 
 
