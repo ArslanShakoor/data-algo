@@ -82,43 +82,64 @@
 # p fabinacciIterate(5)
 # p fabinacciIterate(20)  
 
-def fabinacci(value)
-    fab[0] = 0
-    fab[1] = 1
-    while()
-    fab[] = fabinacci[value - 1] + fabinacci[value - 2]
-  
+# 
+
+def fabinacci(num)
+  if num < 2
+    num
+  else
+    fab = fabinacci(num - 1) + fabinacci(num - 2)
+  end 
 end
 
-def fabinacci2(value)
-  if value < 2
-    return value
-  else
+def fabinacciIterate(num)
+  if num < 2
+    return num
+  else  
     first = 0
     second = 1
     x = 1
-    while (x < value) do
-      number = first + second
-      first = second
-      second = number
+    while(x < num) do 
+      temp = second
+      second = first + second
+      first = temp
       x += 1
-    end  
+    end
+    second
   end
-  number
+end
+
+def fabinacciDyanmic(num)
+  fab = []
+  fab[0] = 0
+  fab[1] = 1
+  x = 1
+  
+  while x < num do 
+    x += 1
+    fab[x]= fab[x-1] + fab[x-2]
+     
+  end 
+  fab[num]
 end
 
 
-
-
-
-
+p fabinacci(0)
 p fabinacci(1)
 p fabinacci(2)
 p fabinacci(5)
 p fabinacci(10)
 
 
-p fabinacci2(1)
-p fabinacci2(2)
-p fabinacci2(5)
-p fabinacci2(10)
+p fabinacciIterate(0)
+p fabinacciIterate(1)
+p fabinacciIterate(2)
+p fabinacciIterate(5)
+p fabinacciIterate(10)
+
+p fabinacciDyanmic(0)
+p fabinacciDyanmic(1)
+p fabinacciDyanmic(2)
+p fabinacciDyanmic(5)
+p fabinacciDyanmic(10)
+
