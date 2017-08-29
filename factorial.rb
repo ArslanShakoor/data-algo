@@ -47,8 +47,6 @@ def factorial1(num)
 end
 
 
-
-
 p factorial(0)
 p factorial(1)
 p factorial(5)
