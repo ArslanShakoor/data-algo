@@ -49,8 +49,10 @@ def selectionSort(array)
   end 
   return array 
 end	
-print selectionSort([5,3,9,17,40,27,40,2,1,59,6])
+selectionSort([5,3,9,17,40,27,40,2,1,59,6])
 
+# in buuble sort we take the element and compare 1 with 2 and put smallar at 1 and then compare 2 with with tree and three with4
+# upto end
 #time complexity avery O(n*n)
 
 def bubbleSort(array)
@@ -67,5 +69,5 @@ def bubbleSort(array)
   end  	
   return array	
 end	
-print bubbleSort([5,3,9,17,40,27,40,2,1,59,6])
+bubbleSort([5,3,9,17,40,27,40,2,1,59,6])
 
