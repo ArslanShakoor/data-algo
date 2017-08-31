@@ -94,8 +94,13 @@
 def reverse(string)
   val = string.split("")
   element = []
+  previous = nil
   string.length.times do
-    element << val.pop
+    current = val.pop
+    if current != previous 
+      element << current
+    end  
+    previous =  current
   end
   element.join
 end
@@ -124,14 +129,14 @@ p reverse("h")
 p reverse("hello!")
 p reverse("hello! where are you going")
 
-p reverse("")
-p reverseIterate("h")
-p reverseIterate("hello!")
-p reverseIterate("hello! where are you going")
+# p reverse("")
+# p reverseIterate("h")
+# p reverseIterate("hello!")
+# p reverseIterate("hello! where are you going")
 
-p reverse("")
-p reverseIterate("h")
-p reverseInPlace("hello!")
-p reverseInPlace("hello! where are you going")
+# p reverse("")
+# p reverseIterate("h")
+# p reverseInPlace("hello!")
+# p reverseInPlace("hello! where are you going")
 
 

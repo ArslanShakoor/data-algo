@@ -1,23 +1,19 @@
-def mostFrequest(array)
-	 
-	frequent_number = nil
-	max_counter = 0
-  array.each do |number|
-  	counter = 0
-    array.each do |value|
-      if number == value 
-        counter += 1
-      end
-    end  
-    if  counter > max_counter
-      max_counter = counter
-      frequent_number = number
-    end 
-   
+def duplicate_integer(array)
+  x = 0
+  y = 0
+  while (x < array.length - 2)
+    y = x + 1
+    while(y < array.length ) do
+      if  array[x] == array[y]
+        return array[x]
+      end 
+      y += 1
+    end
+    x += 1  
   end
-  frequent_number
+  return "not found"  
 end
 
-puts mostFrequest([11,11,13,12,11,17,19,21,21,11,13,19])
-puts mostFrequest([11,11,13,12,2,2,2,21,21,11,2,19])
-puts mostFrequest([11,11,9,9,9,9,9,21,21,11,13,19])
+
+
+p duplicate_integer([2,5,4,1,5])
